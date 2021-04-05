@@ -6,6 +6,7 @@
     <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
     <style>
       body {
+        height: 800px;
         background: orange;
       }
 
@@ -22,6 +23,9 @@
       }
 
       #child1 {
+        position: sticky;
+        left: 400px;
+        top: 10px;
         background-color: red;
       }
 
@@ -30,6 +34,7 @@
       }
 
       #child3 {
+        position: sticky;
         background-color: violet;
       }
     </style>
@@ -43,14 +48,40 @@
       <a href="/fixed.html">Fixed</a>
       <a href="/sticky.html">Sticky</a>
     </div>
-    <div id="parent1">
+    <div id="parent1" style="width:50%; float:left">
       <p>Parent 1</p>
       <div id="parent2">
         <p>Parent 2</p>
-        <div id="child1"><p>Child 1</p></div>
+        <div id="child1">
+          <p>Child 1</p>
+          <p>position: sticky;</p>
+          <p>left: 400px;</p>
+          <p>top: 10px;</p>
+        </div>
+
         <div id="child2"><p>Child 2</p></div>
-        <div id="child3"><p>Child 3</p></div>
+        <div id="child3">
+          <p>Child 3</p>
+          <p>position: sticky;</p>
+        </div>
       </div>
+    </div>
+
+    <div style="width:40%; float:left">
+      <p>
+        1. left, right, top and bottom values does not affect position of Sticky
+        element.
+      </p>
+      <p>
+        3. Sticky element is always placed with respect to its immediate parent
+        element.
+      </p>
+      <p>
+        4. If there is scroll then on scroll, element will move along with
+        scroll until it comes at the edge of viewport. Eg. for vertical scroll,
+        element will stick at the top of viewport even if user scrolls all the
+        way to the bottom. Same for horizontal scroll.
+      </p>
     </div>
   </body>
 </html>

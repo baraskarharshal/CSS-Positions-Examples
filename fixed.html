@@ -6,6 +6,7 @@
     <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
     <style>
       body {
+        height: 800px;
         background: orange;
       }
 
@@ -22,6 +23,9 @@
       }
 
       #child1 {
+        position: fixed;
+        left: 400px;
+        top: 10px;
         background-color: red;
       }
 
@@ -30,6 +34,7 @@
       }
 
       #child3 {
+        position: fixed;
         background-color: violet;
       }
     </style>
@@ -43,14 +48,44 @@
       <a href="/fixed.html">Fixed</a>
       <a href="/sticky.html">Sticky</a>
     </div>
-    <div id="parent1">
+    <div id="parent1" style="width:50%; float:left">
       <p>Parent 1</p>
       <div id="parent2">
         <p>Parent 2</p>
-        <div id="child1"><p>Child 1</p></div>
+        <div id="child1">
+          <p>Child 1</p>
+          <p>position: fixed;</p>
+          <p>left: 400px;</p>
+          <p>top: 10px;</p>
+        </div>
+
         <div id="child2"><p>Child 2</p></div>
-        <div id="child3"><p>Child 3</p></div>
+        <div id="child3">
+          <p>Child 3</p>
+          <p>position: fixed;</p>
+        </div>
       </div>
+    </div>
+
+    <div style="width:40%; float:left">
+      <p>
+        1. Fixed positioned element is removed from normal flow.
+      </p>
+      <p>
+        2. Width and height is automatically adjusted to fit content.
+      </p>
+      <p>
+        3. If left,right,top and bottom values are not given then element is
+        placed with respect to its immediate parent.
+      </p>
+      <p>
+        4. If left,right,top and bottom values are given then element is placed
+        with respect to viewport (viewport is visible area in browser window).
+      </p>
+      <p>
+        5. Fixed element will not move along with horizontal or vertical scroll
+        unlike relative/absolute position.
+      </p>
     </div>
   </body>
 </html>
