@@ -22,7 +22,7 @@
       }
 
       #child1 {
-        position: static;
+        position: relative;
         left: 10px;
         top: 10px;
         background-color: red;
@@ -38,7 +38,7 @@
     </style>
   </head>
   <body>
-    <h1>CSS Position : Static</h1>
+    <h1>CSS Position : Relative</h1>
     <div>
       <a href="/index.html">Static</a>
       <a href="/relative.html">Relative</a>
@@ -53,13 +53,16 @@
         <div id="child1">
           <p>Child 1</p>
           <p>
-            1. Position: Static is the default value browser uses. It renders
-            elements normally.
+            1. Relative element is placed with respect to its immediate parent
+            element.
           </p>
-
           <p>
-            2. left, right, bottom and top property values has no effect on
-            static element.
+            2. left, right, bottom and top property values can be used to set
+            position.
+          </p>
+          <p>
+            3. Browser removes relative element from normal DOM element
+            sequence.
           </p>
         </div>
 

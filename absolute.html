@@ -1,0 +1,156 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="script.js"></script>
+
+    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+    <style>
+      body {
+        background: orange;
+      }
+
+      div {
+        padding: 20px;
+      }
+
+      #parent1 {
+        background-color: green;
+      }
+
+      #parent2 {
+        background-color: yellow;
+      }
+
+      #child1 {
+        position: absolute;
+        background-color: red;
+      }
+
+      #child2 {
+        background-color: cyan;
+      }
+
+      #child3 {
+        background-color: violet;
+      }
+
+      #parent3 {
+        margin-top: 20px;
+        background-color: green;
+      }
+
+      #parent4 {
+        background-color: yellow;
+      }
+
+      #child4 {
+        position: absolute;
+        left: 0;
+        background-color: red;
+      }
+
+      #child5 {
+        background-color: cyan;
+      }
+
+      #child6 {
+        background-color: violet;
+      }
+
+      #parent5 {
+        margin-top: 20px;
+        position: relative;
+        background-color: green;
+      }
+
+      #parent6 {
+        background-color: yellow;
+      }
+
+      #child7 {
+        position: absolute;
+        left: 0;
+        background-color: red;
+      }
+
+      #child8 {
+        background-color: cyan;
+      }
+
+      #child9 {
+        background-color: violet;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Position : Absolute</h1>
+    <div>
+      <a href="/index.html">Static</a>
+      <a href="/relative.html">Relative</a>
+      <a href="/absolute.html">Absolute</a>
+      <a href="/fixed.html">Fixed</a>
+      <a href="/sticky.html">Sticky</a>
+    </div>
+
+    <div style="display:inline-box;">
+      <div style="width:50%; float:left">
+        <div id="parent1">
+          <p>Parent 1</p>
+          <div id="parent2">
+            <p>Parent 2</p>
+            <div id="child1">
+              <p>Child 1</p>
+              <p>position: absolute</p>
+            </div>
+
+            <div id="child2"><p>Child 2</p></div>
+            <div id="child3"><p>Child 3</p></div>
+          </div>
+        </div>
+
+        <div id="parent3">
+          <p>Parent 3</p>
+          <div id="parent4">
+            <p>Parent 4</p>
+            <div id="child4">
+              <p>Child 4</p>
+              <p>position: absolute</p>
+              <p>left: 0</p>
+            </div>
+            <div id="child5"><p>Child 5</p></div>
+            <div id="child6"><p>Child 6</p></div>
+          </div>
+        </div>
+
+        <div id="parent5">
+          <p>Parent 5</p>
+          <p>position: relative</p>
+          <div id="parent6">
+            <p>Parent 6</p>
+            <div id="child7">
+              <p>Child 7</p>
+              <p>position: absolute</p>
+              <p>left: 0</p>
+            </div>
+            <div id="child8"><p>Child 8</p></div>
+            <div id="child9"><p>Child 9</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="width:40%; float:left">
+        <p>
+          1. Absolute positioned element is removed from normal flow and placed
+          with respect to first non static parent element.
+        </p>
+        <p>
+          2. Element is placed inside its immediate parent if left, right,
+          bottom and top values are not given. If any of these values are given
+          then element will be placed with respect to its first non static
+          parent element. If there is no non static parent element then element
+          will be placed with respect to body element.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
